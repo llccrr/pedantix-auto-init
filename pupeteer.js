@@ -104,7 +104,8 @@ const launchGameInit =async () => {
     });
     console.log(teamCode);
 
-    // await browser.close();
+    await browser.close();
+    return teamCode;
 }
 
 

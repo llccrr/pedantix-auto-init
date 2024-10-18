@@ -6,8 +6,8 @@ const port = 3006;
 
 app.get('/run', async (req, res) => {
   try {
-    const title = await launchGameInit('https://example.com');
-    res.send(`Page title is: ${title}`);
+    const teamCode = await launchGameInit();
+    res.send(`Team code is: ${teamCode}`);
   } catch (error) {
     res.status(500).send('Error running Puppeteer script');
   }
